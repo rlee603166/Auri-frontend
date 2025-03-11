@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 const AnalyticsScreen = () => {
     return (
         <View style={styles.container}>
-            <Text>Hello from Analytics Screen</Text>
+            <Text>Hello from Analytics Screen!</Text>
         </View>
     );
 };
