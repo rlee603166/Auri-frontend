@@ -1,6 +1,10 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import { Calendar, Home as HomeIcon, BarChart3 } from "lucide-react-native";
+import {
+  Calendar as CalendarIcon,
+  Home as HomeIcon,
+  BarChart3,
+} from "lucide-react-native";
 import theme from "@/theme";
 
 /**
@@ -27,7 +31,21 @@ interface BottomNavigationProps {
 
 export default function BottomNavigation({
   activeTab = "home",
-  onTabPress = () => {},
+  onTabPress = (tab) => {
+    // Handle navigation based on tab
+    if (tab === "home") {
+      // Navigate to home
+      const { router } = require("expo-router");
+      router.push("/home");
+    } else if (tab === "calendar") {
+      // Navigate to calendar
+      const { router } = require("expo-router");
+      router.push("/calendar");
+    } else if (tab === "analytics") {
+      // Navigate to analytics (not implemented yet)
+      console.log("Analytics tab pressed");
+    }
+  },
 }: BottomNavigationProps) {
   return (
     <View style={styles.container}>
@@ -38,7 +56,7 @@ export default function BottomNavigation({
         accessibilityRole="button"
         accessibilityLabel="Calendar tab"
       >
-        <Calendar
+        <CalendarIcon
           width={24}
           height={24}
           color={
