@@ -4,6 +4,7 @@ import DateNavigation from "@/components/home/DateNavigation";
 import ActivityCard from "@/components/home/ActivityCard";
 import JournalEntry from "@/components/home/JournalEntry";
 import BottomNavigation from "@/components/home/BottomNavigation";
+import FloatingActionButton from "@/components/home/FloatingActionButton";
 import theme from "@/theme";
 
 /**
@@ -75,6 +76,9 @@ export default function HomeScreen() {
 
       {/* Bottom Navigation Bar */}
       <BottomNavigation activeTab="home" />
+
+      {/* Floating Action Button */}
+      <FloatingActionButton />
     </View>
   );
 }
