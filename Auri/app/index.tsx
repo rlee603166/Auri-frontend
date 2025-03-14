@@ -1,21 +1,11 @@
-import { Text, View } from "react-native";
-import { useEffect } from "react";
-import { config } from "./config";
+import { View, Text } from "react-native";
+import { Link } from "expo-router";
 
 export default function Index() {
-    useEffect(() => {
-        console.log(config);
-    }, [])
-
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+    return (
+        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+            <Text>Welcome to Auri</Text>
+            <Link href="/auth">Go to Auth</Link>
+        </View>
+    );
 }
