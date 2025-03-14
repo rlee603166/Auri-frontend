@@ -1,1 +1,10 @@
-{"watchman_config": {"max_files_watched": 100000}}
+{
+  "ignore_dirs": [
+    ".git",
+    "node_modules",
+    ".expo",
+    ".next",
+    "dist",
+    "web-build"
+  ]
+}
