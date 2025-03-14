@@ -1,9 +1,10 @@
 import { View, Text, StyleSheet } from "react-native";
+import HomeScreen from "./home";
 
 const CalendarScreen = () => {
     return (
         <View style={styles.container}>
-            <Text>Hello from Calendar Screen</Text>
+            <HomeScreen />
         </View>
     );
 };

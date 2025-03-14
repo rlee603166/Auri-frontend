@@ -1,9 +1,10 @@
 import { Text, View, StyleSheet } from "react-native";
+import JournalEntryScreen from "./journal";
 
 const UploadScreen = () => {
     return (
         <View style={styles.container}>
-            <Text>Hello from Upload Screen</Text>
+            <JournalEntryScreen />
         </View>
     );
 };
