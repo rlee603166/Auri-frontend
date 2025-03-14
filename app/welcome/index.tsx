@@ -1,42 +1,6 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
-import WelcomeLogo from "@/components/welcome/WelcomeLogo";
-import WelcomeActions from "@/components/welcome/WelcomeActions";
+import WelcomeScreen from "@/screens/WelcomeScreen";
 
-/**
- * WelcomeScreen Component
- *
- * A welcome/splash screen for the application featuring a logo,
- * tagline, and action buttons for sign in and getting started.
- */
-export default function WelcomeScreen() {
-  return (
-    <View style={styles.container}>
-      {/* Logo and Tagline Section */}
-      <View style={styles.logoContainer}>
-        <WelcomeLogo />
-      </View>
-
-      {/* Action Buttons Section */}
-      <WelcomeActions />
-    </View>
-  );
+export default function Welcome() {
+  return <WelcomeScreen />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    width: "100%",
-    height: "100%",
-    paddingHorizontal: 20,
-    paddingVertical: 24,
-    backgroundColor: "white",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  logoContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
