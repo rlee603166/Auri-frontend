@@ -1,15 +1,27 @@
 // app/tabs/_layout.tsx
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import JournalEntryScreen from "../screens/upload/journal";
+
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 export default function TabsLayout() {
+    const insets = useSafeAreaInsets();
+
     return (
         <Tab.Navigator
             initialRouteName="upload"
             screenOptions={{
                 tabBarShowLabel: false,
+                tabBarStyle: {
+                    paddingBottom: insets.bottom,
+                    height: 49 + insets.bottom,
+                },
             }}
         >
             <Tab.Screen
@@ -32,7 +44,7 @@ export default function TabsLayout() {
                 options={{
                     tabBarIcon: ({ color, size, focused }) => (
                         <Ionicons
-                            name={focused ? "add-circle" : "add-circle-outline"}
+                            name={focused ? "home" : "home-outline"}
                             size={size}
                             color={"black"}
                         />
@@ -57,3 +69,4 @@ export default function TabsLayout() {
         </Tab.Navigator>
     );
 }
+

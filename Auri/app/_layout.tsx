@@ -2,6 +2,7 @@
 import { Stack, useRouter, useRootNavigationState } from "expo-router";
 import { useEffect, useState } from "react";
 
+
 export default function RootLayout() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const router = useRouter();
