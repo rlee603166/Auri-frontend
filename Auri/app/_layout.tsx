@@ -12,7 +12,7 @@ export default function RootLayout() {
         if (!navigationState?.key) return;
 
         const checkAuth = async () => {
-            const loggedIn = true;
+            const loggedIn = false;
             setIsAuthenticated(loggedIn);
 
             if (loggedIn) {

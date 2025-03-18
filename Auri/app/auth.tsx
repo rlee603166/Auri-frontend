@@ -1,6 +1,6 @@
 // app/auth.tsx
-import WelcomeScreen from "./screens/auth/WelcomeScreen";
+import AuthScreen from "./screens/auth/AuthScreen";
 
 export default function Auth() {
-    return <WelcomeScreen />;
+    return <AuthScreen />;
 }
